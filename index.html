@@ -285,6 +285,91 @@
             color: #666;
             line-height: 1.6;
         }
+        .streetscape-section {
+            background-color: #ffffff;
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+        .streetscape-title {
+            color: #3a9f54;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .streetscape-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #83c143;
+            margin: 1rem auto;
+        }
+        .streetscape-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .streetscape-item:nth-child(1),
+        .streetscape-item:nth-child(2),
+        .streetscape-item:nth-child(3) {
+            grid-column: span 2;
+        }
+        .streetscape-item:nth-child(4) {
+            grid-column: 2 / span 2;
+        }
+        .streetscape-item:nth-child(5) {
+            grid-column: 4 / span 2;
+        }
+
+        @media (max-width: 992px) {
+            .streetscape-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .streetscape-item:nth-child(1),
+            .streetscape-item:nth-child(2),
+            .streetscape-item:nth-child(3),
+            .streetscape-item:nth-child(4),
+            .streetscape-item:nth-child(5) {
+                grid-column: span 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .streetscape-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .streetscape-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .streetscape-item:hover {
+            transform: translateY(-5px);
+        }
+        .streetscape-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        .streetscape-caption {
+            padding: 1.5rem;
+            background: white;
+        }
+        .streetscape-caption p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -449,6 +534,46 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Streetscape Conditions Section -->
+            <section class="streetscape-section">
+                <div class="container">
+                    <h2 class="streetscape-title">Streetscape Conditions</h2>
+                    <div class="streetscape-grid">
+                        <div class="streetscape-item">
+                            <img src="assets/streetscape conditions/ss1.png" alt="Street with litter" class="streetscape-image">
+                            <div class="streetscape-caption">
+                                <p>Certain blocks suffer from incessant litter</p>
+                            </div>
+                        </div>
+                        <div class="streetscape-item">
+                            <img src="assets/streetscape conditions/ss2.png" alt="Storefront with graffiti" class="streetscape-image">
+                            <div class="streetscape-caption">
+                                <p>Vacant storefronts and other surfaces are often affected by graffiti, impacting the area's visual appeal</p>
+                            </div>
+                        </div>
+                        <div class="streetscape-item">
+                            <img src="assets/streetscape conditions/ss3.png" alt="Street at night" class="streetscape-image">
+                            <div class="streetscape-caption">
+                                <p>Certain blocks would benefit from improved lighting to enhance safety and visibility, especially at night</p>
+                            </div>
+                        </div>
+                        <div class="streetscape-item">
+                            <img src="assets/streetscape conditions/ss4.png" alt="Cracked pavement" class="streetscape-image">
+                            <div class="streetscape-caption">
+                                <p>Cracks, uneven pavement, and other hazards were noted in certain areas, posing risks to pedestrians</p>
+                            </div>
+                        </div>
+                        <div class="streetscape-item">
+                            <img src="assets/streetscape conditions/ss5.png" alt="Street with trees" class="streetscape-image">
+                            <div class="streetscape-caption">
+                                <p>Some blocks feature well-maintained greenery, enhancing the streetscape and providing shade. There is potential to introduce more trees, planters, and small parks to improve aesthetics and air quality</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
 
             <!-- Desired Changes Analysis -->
             <div class="section-container">
