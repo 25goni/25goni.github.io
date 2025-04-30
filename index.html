@@ -525,25 +525,20 @@
             margin-bottom: 1rem;
             text-align: center;
         }
-        .roadmap-card ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
         .roadmap-card li {
             margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            padding-left: 0;
             position: relative;
             color: #555;
         }
         .roadmap-card li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #83c143;
+            display: none;
         }
-        .roadmap-card li:last-child {
+        .roadmap-card ul {
+            list-style: none;
+            padding-left: 0;
             margin-bottom: 0;
+            text-align: center;
         }
     </style>
 </head>
@@ -1005,78 +1000,39 @@
     <div class="container">
         <h2 class="section-title">Future Development Roadmap</h2>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="roadmap-card">
                     <div class="roadmap-icon">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
-                    <h3>Interactive Merchant Map</h3>
-                    <ul>
-                        <li>Click-and-view merchant information</li>
-                        <li>Filter by business type</li>
-                        <li>Business hours and contact details</li>
-                        <li>Vacancy opportunities visualization</li>
-                    </ul>
+                    <h3>Interactive Data Platform</h3>
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="roadmap-card">
                     <div class="roadmap-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>Data Portal</h3>
-                    <ul>
-                        <li>Searchable CDNA database</li>
-                        <li>Downloadable reports and datasets</li>
-                        <li>Custom data visualization tools</li>
-                        <li>Year-over-year comparisons</li>
-                    </ul>
+                    <h3>Economic Development</h3>
                 </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="roadmap-card">
                     <div class="roadmap-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Community Features</h3>
-                    <ul>
-                        <li>Merchant success stories</li>
-                        <li>Event calendar for the district</li>
-                        <li>Business opportunity listings</li>
-                        <li>Community feedback portal</li>
-                    </ul>
+                    <h3>Community Building</h3>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="roadmap-card">
-                    <div class="roadmap-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Real-Time Analytics</h3>
-                    <ul>
-                        <li>Live foot traffic data</li>
-                        <li>Business performance metrics</li>
-                        <li>Economic impact tracking</li>
-                        <li>Trend analysis dashboard</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-6 col-md-6 mb-4">
                 <div class="roadmap-card">
                     <div class="roadmap-icon">
                         <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>Resource Hub</h3>
-                    <ul>
-                        <li>Business development guides</li>
-                        <li>Grant application assistance</li>
-                        <li>M/WBE certification help</li>
-                        <li>Networking opportunities</li>
-                    </ul>
+                    <h3>Business Support</h3>
                 </div>
             </div>
         </div>
