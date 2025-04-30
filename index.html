@@ -370,6 +370,133 @@
             line-height: 1.6;
             color: #333;
         }
+        .consumer-profile-section {
+            background-color: #ffffff;
+            padding: 4rem 0;
+        }
+        .consumer-profile-title {
+            color: #3a9f54;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .consumer-profile-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #83c143;
+            margin: 1rem auto;
+        }
+        .consumer-profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .consumer-profile-image {
+            grid-column: 1;
+            grid-row: 1 / span 3;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .consumer-profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .consumer-profile-text {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .consumer-profile-text h3 {
+            color: #3a9f54;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .consumer-profile-text p {
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .consumer-profile-grid {
+                grid-template-columns: 1fr;
+            }
+            .consumer-profile-image {
+                grid-row: 1;
+                height: 300px;
+            }
+        }
+        .merchant-profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .merchant-profile-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .merchant-profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .merchant-profile-text {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .merchant-profile-text h3 {
+            color: #3a9f54;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .merchant-profile-text ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .merchant-profile-text li {
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+            display: flex;
+            align-items: baseline;
+        }
+        .merchant-profile-text li:last-child {
+            margin-bottom: 0;
+        }
+        .merchant-profile-text li:before {
+            content: "•";
+            color: #3a9f54;
+            margin-right: 0.5rem;
+        }
+        .merchant-charts {
+            margin-top: 2.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+        }
+        .merchant-charts .chart-container {
+            margin-bottom: 0;
+            box-shadow: none;
+            padding: 0;
+        }
+        .merchant-charts .chart-title {
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -493,6 +620,23 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Vacancy Images -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-wrapper">
+                                    <img src="assets/vacancy1.png" alt="Vacancy Example 1" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-wrapper">
+                                    <img src="assets/vacancy2.png" alt="Vacancy Example 2" style="width: 100%; height: auto; border-radius: 8px;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -613,6 +757,128 @@
                 </div>
             </div>
 
+            <!-- Consumer Profile Section -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Consumer Profile</h3>
+                    <div class="consumer-profile-grid">
+                        <div class="consumer-profile-image">
+                            <img src="assets/consumerprofile.png" alt="Consumer Profile Overview">
+                        </div>
+                        <div class="consumer-profile-text">
+                            <h3>Shopping Patterns</h3>
+                            <p><strong>Consumer Survey Highlights:</strong></p>
+                            <ul style="list-style: none; padding-left: 0; margin-bottom: 1rem;">
+                                <li style="margin-bottom: 0.5rem;">• 67% shop here 1-4 times per week</li>
+                                <li style="margin-bottom: 0.5rem;">• 55% spend over $51 when they shop here</li>
+                                <li style="margin-bottom: 0.5rem;">• 66% take public transit or walk</li>
+                                <li style="margin-bottom: 0.5rem;">• 59% live in the area</li>
+                            </ul>
+                            <p>Other areas people frequently shop in are Jackson Heights, Manhattan, Long Island, Flushing, and Elmhurst.</p>
+                        </div>
+                        <div class="consumer-profile-text">
+                            <h3>Top 5 Desired New Businesses</h3>
+                            <ul style="list-style: none; padding-left: 0; margin-bottom: 1rem;">
+                                <li style="margin-bottom: 0.8rem; font-size: 1.1rem;">• Restaurant</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.1rem;">• Café</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.1rem;">• Arts & Culture Center/Activity Space</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.1rem;">• Supermarket</li>
+                                <li style="margin-bottom: 0.8rem; font-size: 1.1rem;">• Clothing Store</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-center mt-4">
+                        <!-- Daytime Safety Perception -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">How safe do you feel at daytime?</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925276">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925276/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nighttime Safety Perception -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">How safe do you feel at night?</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925330">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925330/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Merchant Profile Section -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Merchant Profile</h3>
+                    <div class="merchant-profile-grid">
+                        <div class="merchant-profile-image">
+                            <img src="assets/estatespharm.png" alt="Merchant Profile Overview">
+                        </div>
+                        <div class="merchant-profile-text">
+                            <h3>Merchant Survey Highlights</h3>
+                            <ul>
+                                <li>41% live in the area</li>
+                                <li>48% are M/WBE, only 7% are certified</li>
+                                <li>63% have 0 – 5 full-time employees</li>
+                                <li>74% plan to stay open in the coming year</li>
+                                <li>49% have a website, 57% use social media</li>
+                                <li>77% rent</li>
+                                <li>40% are interested in merchant organizing</li>
+                                <li>65% have a Fair or Good-Cooperative relationship with their landlord</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="merchant-charts">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="chart-container">
+                                    <div class="chart-title">Merchant Challenges</div>
+                                    <div class="chart-wrapper">
+                                        <div class="flourish-embed flourish-chart" data-src="visualisation/22917421">
+                                            <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                            <noscript>
+                                                <img src="https://public.flourish.studio/visualisation/22917421/thumbnail" width="100%" alt="chart visualization" />
+                                            </noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="chart-container">
+                                    <div class="chart-title">Merchant Desired Resources</div>
+                                    <div class="chart-wrapper">
+                                        <div class="flourish-embed flourish-chart" data-src="visualisation/22918271">
+                                            <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                            <noscript>
+                                                <img src="https://public.flourish.studio/visualisation/22918271/thumbnail" width="100%" alt="chart visualization" />
+                                            </noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Merchant Analysis Section -->
             <div class="section-container">
                 <div class="col-lg-12">
@@ -640,82 +906,6 @@
                                         <script src="https://public.flourish.studio/resources/embed.js"></script>
                                         <noscript>
                                             <img src="https://public.flourish.studio/visualisation/22918271/thumbnail" width="100%" alt="chart visualization" />
-                                        </noscript>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Merchant Profile Analysis -->
-            <div class="section-container">
-                <div class="col-lg-12">
-                    <h3 class="section-title">Merchant Profile Analysis</h3>
-                    <div class="row justify-content-center">
-                        <!-- Business Tenure -->
-                        <div class="col-lg-6">
-                            <div class="chart-container">
-                                <div class="chart-title">How many years have you been in business here?</div>
-                                <div class="chart-wrapper">
-                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925102">
-                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
-                                        <noscript>
-                                            <img src="https://public.flourish.studio/visualisation/22925102/thumbnail" width="100%" alt="chart visualization" />
-                                        </noscript>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Sales Trend -->
-                        <div class="col-lg-6">
-                            <div class="chart-container">
-                                <div class="chart-title">Over the past year, have your sales:</div>
-                                <div class="chart-wrapper">
-                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925203">
-                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
-                                        <noscript>
-                                            <img src="https://public.flourish.studio/visualisation/22925203/thumbnail" width="100%" alt="chart visualization" />
-                                        </noscript>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Consumer Profile Analysis -->
-            <div class="section-container">
-                <div class="col-lg-12">
-                    <h3 class="section-title">Consumer Profile Analysis</h3>
-                    <div class="row justify-content-center">
-                        <!-- Daytime Safety Perception -->
-                        <div class="col-lg-6">
-                            <div class="chart-container">
-                                <div class="chart-title">How safe do you feel at daytime?</div>
-                                <div class="chart-wrapper">
-                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925276">
-                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
-                                        <noscript>
-                                            <img src="https://public.flourish.studio/visualisation/22925276/thumbnail" width="100%" alt="chart visualization" />
-                                        </noscript>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Nighttime Safety Perception -->
-                        <div class="col-lg-6">
-                            <div class="chart-container">
-                                <div class="chart-title">How safe do you feel at night?</div>
-                                <div class="chart-wrapper">
-                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925330">
-                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
-                                        <noscript>
-                                            <img src="https://public.flourish.studio/visualisation/22925330/thumbnail" width="100%" alt="chart visualization" />
                                         </noscript>
                                     </div>
                                 </div>
