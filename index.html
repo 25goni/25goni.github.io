@@ -64,7 +64,8 @@
             padding: 20px;
             margin-bottom: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
+            height: auto;
+            position: relative;
         }
         .chart-container:hover {
             transform: translateY(-5px);
@@ -72,17 +73,16 @@
         }
         .chart-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-        }
-        .chart-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            border: none;
+        }
+        .flourish-embed {
+            width: 100% !important;
+            margin: 0 !important;
+        }
+        .flourish-embed iframe {
+            width: 100% !important;
+            min-width: 100% !important;
+            border: none !important;
         }
         .btn-custom {
             background-color: #3a9f54;
@@ -109,6 +109,50 @@
             display: block;
             width: 100%;
             height: 100px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                padding: 15px;
+            }
+        }
+        .section-divider {
+            border-top: 2px solid #83c143;
+            margin: 3rem 0;
+            width: 100%;
+        }
+        .section-container {
+            padding: 2rem 0;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            color: #3a9f54;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #83c143;
+            margin: 1rem auto;
+        }
+        .section-container.no-space {
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        .section-container.no-space .chart-container {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .section-container.no-space .row {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
         }
     </style>
 </head>
@@ -138,65 +182,280 @@
 <section class="py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <!-- Chart 1 -->
-            <div class="col-lg-6 col-md-8 mb-4">
-                <div class="chart-container">
-                    <div class="chart-title">Overall Business Inventory</div>
-                    <div class="chart-wrapper">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/22903194">
-                            <script src="https://public.flourish.studio/resources/embed.js"></script>
-                            <noscript><img src="https://public.flourish.studio/visualisation/22903194/thumbnail" width="100%" alt="Chart Visualization" /></noscript>
+            <!-- Business Inventory Analysis -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Business Inventory Analysis</h3>
+                    <div class="row justify-content-center">
+                        <!-- Overall Business Inventory -->
+                        <div class="col-lg-12 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-title">Overall Business Inventory</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22903194">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22903194/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Specific Inventories -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-title">Jamaica Avenue Business Inventory</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22924203">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22924203/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-title">Hillside Avenue Business Inventory</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22924350">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22924350/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Chart 2 -->
-            <div class="col-lg-6 col-md-8 mb-4">
-                <div class="chart-container">
-                    <div class="chart-title">Merchant Challenges</div>
-                    <div class="chart-wrapper">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/22917421">
-                            <script src="https://public.flourish.studio/resources/embed.js"></script>
-                            <noscript>
-                                <img src="https://public.flourish.studio/visualisation/22917421/thumbnail" width="100%" alt="chart visualization" />
-                            </noscript>
+            <!-- Vacancy Rate Analysis -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Vacancy Rate Analysis</h3>
+                    <div class="row justify-content-center">
+                        <!-- Overall Vacancy Rate -->
+                        <div class="col-lg-12 mb-2">
+                            <div class="chart-container">
+                                <div class="chart-title">Overall Vacancy Rate</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22924580">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22924580/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jamaica and Hillside Avenue Vacancy Rate -->
+                        <div class="col-lg-12">
+                            <div class="chart-container">
+                                <div class="chart-title">Jamaica and Hillside Avenue Vacancy Rate</div>
+                                <div class="chart-wrapper" style="min-height: 200px;">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22924691">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22924691/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Chart 3 -->
-            <div class="col-lg-6 col-md-8 mb-4">
-                <div class="chart-container">
-                    <div class="chart-title">Merchant Desired Resources</div>
-                    <div class="chart-wrapper">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/22918271">
-                            <script src="https://public.flourish.studio/resources/embed.js"></script>
-                            <noscript>
-                                <img src="https://public.flourish.studio/visualisation/22918271/thumbnail" width="100%" alt="chart visualization" />
-                            </noscript>
+            <!-- Storefront Conditions Analysis -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Storefront Conditions Analysis</h3>
+                    <div class="row justify-content-center">
+                        <!-- Overall Storefront Conditions -->
+                        <div class="col-lg-12 mb-2">
+                            <div class="chart-container">
+                                <div class="chart-title">Overall Storefront Conditions</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22924927">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22924927/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jamaica and Hillside Avenue Storefront Conditions -->
+                        <div class="col-lg-12">
+                            <div class="chart-container">
+                                <div class="chart-title">Jamaica and Hillside Avenue Storefront Conditions</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22924887">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22924887/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Chart 4 -->
-            <div class="col-lg-6 col-md-8 mb-4">
-                <div class="chart-container">
-                    <div class="chart-title">Chart Title 4</div>
-                    <div class="chart-wrapper">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/22903194"></div>
+            <!-- Desired Changes Analysis -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Desired Changes Analysis</h3>
+                    <div class="row justify-content-center">
+                        <!-- Merchant Desired Changes -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">Merchant Desired Changes</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925007">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925007/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Consumer Desired Changes -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">Consumer Desired Changes</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925048">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925048/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Chart 5 -->
-            <div class="col-lg-6 col-md-8 mb-4">
-                <div class="chart-container">
-                    <div class="chart-title">Chart Title 5</div>
-                    <div class="chart-wrapper">
-                        <div class="flourish-embed flourish-chart" data-src="visualisation/22903194"></div>
+            <!-- Merchant Analysis Section -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Merchant Analysis</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-title">Merchant Challenges</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22917421">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22917421/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="chart-container">
+                                <div class="chart-title">Merchant Desired Resources</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22918271">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22918271/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Merchant Profile Analysis -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Merchant Profile Analysis</h3>
+                    <div class="row justify-content-center">
+                        <!-- Business Tenure -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">How many years have you been in business here?</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925102">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925102/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales Trend -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">Over the past year, have your sales:</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925203">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925203/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consumer Profile Analysis -->
+            <div class="section-container">
+                <div class="col-lg-12">
+                    <h3 class="section-title">Consumer Profile Analysis</h3>
+                    <div class="row justify-content-center">
+                        <!-- Daytime Safety Perception -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">How safe do you feel at daytime?</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925276">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925276/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nighttime Safety Perception -->
+                        <div class="col-lg-6">
+                            <div class="chart-container">
+                                <div class="chart-title">How safe do you feel at night?</div>
+                                <div class="chart-wrapper">
+                                    <div class="flourish-embed flourish-chart" data-src="visualisation/22925330">
+                                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                                        <noscript>
+                                            <img src="https://public.flourish.studio/visualisation/22925330/thumbnail" width="100%" alt="chart visualization" />
+                                        </noscript>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
