@@ -117,13 +117,47 @@
             background-color: #3a9f54;
             color: white;
             border: none;
-            padding: 0.75rem 2rem;
+            padding: 1rem 2rem;
             font-size: 1.1rem;
             border-radius: 50px;
             transition: background-color 0.3s ease;
+            margin: 0 10px;
+            text-align: center;
+            min-width: 200px;
+        }
+        .btn-title {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .btn-subtitle {
+            display: block;
+            font-size: 0.9rem;
         }
         .btn-custom:hover {
             background-color: #83c143;
+            color: white;
+            text-decoration: none;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: nowrap;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        @media (max-width: 768px) {
+            .buttons-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn-custom {
+                width: 100%;
+                margin: 5px 0;
+            }
         }
         footer {
             background-color: #eeeeee;
@@ -182,6 +216,74 @@
         .section-container.no-space .row {
             margin-bottom: 0 !important;
             padding-bottom: 0 !important;
+        }
+        .learn-more-heading {
+            color: #3a9f54;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .impact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+        .impact-title {
+            color: #3a9f54;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .impact-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #83c143;
+            margin: 1rem auto;
+        }
+        .impact-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .impact-item {
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .impact-item:hover {
+            transform: translateY(-5px);
+        }
+        .impact-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #3a9f54;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        .impact-label {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+        .impact-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -499,9 +601,38 @@
             </div>
         </div>
 
-        <!-- Learn More Button -->
+        <!-- Impact Numbers Section -->
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="impact-title">Key Highlights</h2>
+                <div class="impact-container">
+                    <div class="impact-item">
+                        <div class="impact-number">12.3%</div>
+                        <div class="impact-label">Vacancy Rate</div>
+                        <div class="impact-description">Out of 481 total storefronts, 59 are vacant, indicating a significant opportunity for activation and revitalization.</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">75%</div>
+                        <div class="impact-label">Safety Concerns on Jamaica Ave</div>
+                        <div class="impact-description">Merchants on Jamaica Ave cite safety as a top concern, highlighting the need for improved lighting and community policing efforts.</div>
+                    </div>
+                    <div class="impact-item">
+                        <div class="impact-number">55%</div>
+                        <div class="impact-label">High Consumer Spending</div>
+                        <div class="impact-description">Consumers spend over $51 per visit, suggesting strong local buying power and potential for increased revenue if storefront activation and environment improvements are made.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
         <div class="text-center mt-5">
-            <a href="https://bhalo.org/" target="_blank" class="btn btn-custom">Learn More about BHALO</a>
+            <h3 class="learn-more-heading">Learn More</h3>
+            <div class="buttons-container">
+                <a href="https://bhalo.org/" target="_blank" class="btn btn-custom">BHALO</a>
+                <a href="https://www.nyc.gov/sbs" target="_blank" class="btn btn-custom">NYC SBS</a>
+                <a href="https://www.nyc.gov/site/sbs/neighborhoods/avenue-nyc.page" target="_blank" class="btn btn-custom">Avenue NYC</a>
+            </div>
         </div>
     </div>
 </section>
