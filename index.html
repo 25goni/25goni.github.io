@@ -497,6 +497,54 @@
         .merchant-charts .chart-title {
             margin-bottom: 1rem;
         }
+        .roadmap-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+        }
+        .roadmap-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .roadmap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .roadmap-icon {
+            font-size: 2.5rem;
+            color: #3a9f54;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .roadmap-card h3 {
+            color: #3a9f54;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .roadmap-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .roadmap-card li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+        }
+        .roadmap-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #83c143;
+        }
+        .roadmap-card li:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -623,17 +671,17 @@
 
                         <!-- Vacancy Images -->
                         <div class="col-lg-6 mb-4">
-                            <div class="chart-container">
-                                <div class="chart-wrapper">
-                                    <img src="assets/vacancy1.png" alt="Vacancy Example 1" style="width: 100%; height: auto; border-radius: 8px;">
+                            <div class="chart-container" style="padding: 0; overflow: hidden;">
+                                <div class="chart-wrapper" style="padding: 0; display: flex; justify-content: center;">
+                                    <img src="assets/vacancy1.png" alt="Vacancy Example 1" style="width: 100%; max-width: 400px; height: 300px; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-6 mb-4">
-                            <div class="chart-container">
-                                <div class="chart-wrapper">
-                                    <img src="assets/vacancy2.png" alt="Vacancy Example 2" style="width: 100%; height: auto; border-radius: 8px;">
+                            <div class="chart-container" style="padding: 0; overflow: hidden;">
+                                <div class="chart-wrapper" style="padding: 0; display: flex; justify-content: center;">
+                                    <img src="assets/vacancy2.png" alt="Vacancy Example 2" style="width: 100%; max-width: 400px; height: 300px; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                                 </div>
                             </div>
                         </div>
@@ -951,6 +999,92 @@
         </div>
     </div>
 </section>
+
+<!-- Roadmap Section -->
+<section class="roadmap-section py-5">
+    <div class="container">
+        <h2 class="section-title">Future Development Roadmap</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Interactive Merchant Map</h3>
+                    <ul>
+                        <li>Click-and-view merchant information</li>
+                        <li>Filter by business type</li>
+                        <li>Business hours and contact details</li>
+                        <li>Vacancy opportunities visualization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Portal</h3>
+                    <ul>
+                        <li>Searchable CDNA database</li>
+                        <li>Downloadable reports and datasets</li>
+                        <li>Custom data visualization tools</li>
+                        <li>Year-over-year comparisons</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Features</h3>
+                    <ul>
+                        <li>Merchant success stories</li>
+                        <li>Event calendar for the district</li>
+                        <li>Business opportunity listings</li>
+                        <li>Community feedback portal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-Time Analytics</h3>
+                    <ul>
+                        <li>Live foot traffic data</li>
+                        <li>Business performance metrics</li>
+                        <li>Economic impact tracking</li>
+                        <li>Trend analysis dashboard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Resource Hub</h3>
+                    <ul>
+                        <li>Business development guides</li>
+                        <li>Grant application assistance</li>
+                        <li>M/WBE certification help</li>
+                        <li>Networking opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <!-- Footer -->
 <footer>
